@@ -114,5 +114,11 @@
 	<classpathentry kind="lib" path="C:/Users/matteo/Desktop/SIW/Materiale didattico/apache-tomee-jaxrs-1.7.1/lib/xbean-naming-4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/matteo/Desktop/SIW/Materiale didattico/apache-tomee-jaxrs-1.7.1/lib/xbean-reflect-4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/matteo/Desktop/SIW/Materiale didattico/apache-tomee-jaxrs-1.7.1/lib/xmlschema-core-2.0.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF 2.2 (Mojarra 2.2.0)">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jst.jsf"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
