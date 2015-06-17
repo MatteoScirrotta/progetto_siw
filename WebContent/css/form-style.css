@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+div#registration.container {
+	margin-top:10%;
+}
+
+html { 
+	background-color:#03a9f4; 
+}
+
+html body {
+	background-color:#03a9f4;
+}
+
+body {
+	background-color:#03a9f4; 
+}
+
+container {
+	background-color:#03a9f4; 
+}
+
+div.row {
+	background-color:#03a9f4;
+}
+
+body h3 {
+	background-color:#03a9f4;
+}
+
+a.forgot-password {
+	color:#fbfbfb;
+}
