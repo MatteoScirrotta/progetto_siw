@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4"></div>
+
+					<div class="col-sm-4">
+						<h1>Inserimento CD</h1>
+						<h2>Tutti i campi sono obbligatori</h2>
+						<div>
+							<h:inputText value="#{productControllerJSF.title}"
+								required="true" requiredMessage="Title is mandatory" id="title"
+								class="form-control" p:placeholder="Titolo" />
+							<h:message for="title" />
+						</div>
+						<div>
+							<h:inputText value="#{productControllerJSF.code}" required="true"
+								requiredMessage="Code is mandatory" id="code"
+								class="form-control" p:placeholder="Codice" />
+							<h:message for="code" />
+						</div>
+						<div>
+							<h:inputText value="#{productControllerJSF.price}"
+								required="true" requiredMessage="Price is mandatory" id="price"
+								class="form-control" p:placeholder="Prezzo" />
+							<h:message for="price" />
+						</div>
+						<div>
+							<h:inputText value="#{productControllerJSF.inStock}"
+								required="true" requiredMessage="Availability is mandatory"
+								id="inStock" class="form-control" p:placeholder="Numero copie" />
+							<h:message for="inStock" />
+						</div>
+						<div>
+							<h:inputText value="#{productControllerJSF.description}"
+								required="false" id="description" class="form-control" cols="20"
+								row="5" p:placeholder="Inserisci descrizione (non obbligatorio)" />
+							<h:message for="description" />
+							<h:inputText value="#{productControllerJSF.author}"
+								required="true" requiredMessage="Author is mandatory"
+								id="author" class="form-control" p:placeholder="Autore">
+							</h:inputText>
+							<h:message for="author" />
+							<h:inputText value="#{productControllerJSF.genre}"
+								required="true" requiredMessage="Genre is mandatory"
+								class="form-control" id="genre" p:placeholder="Genere">
+							</h:inputText>
+							<h:message for="genre" />
+						</div>
+						<div>
+							<h:commandButton value="Avanti"
+								action="#{productControllerJSF.checkData}"
+								class="btn btn-lg btn-primary btn-block btn-signin" />
+						</div>
+						<div class="col-sm-4">
+							<div>
+								<a href="adminHome">Indietro</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+				<div class="col-sm-4"></div>
+			</div>
+			<!-- /container -->
+		</h:form>
+	</f:view>
+</h:body>
+</html>

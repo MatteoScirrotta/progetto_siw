@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<h:body>
+<f:view>
+	
+		<h:form>
+
+			<h1>Dettagli CD</h1>
+			<ul>
+				<li>Titolo: ${productControllerJSF.product.title}</li>
+				<li>Codice: ${productControllerJSF.product.code}</li>
+				<li>Prezzo: ${productControllerJSF.product.price}</li>
+				<li>Autore: ${productControllerJSF.product.author}</li>
+				<li>Genere: ${productControllerJSF.product.genre}</li>
+				<li>Disponibilità: ${productControllerJSF.product.inStock}</li>
+			</ul>
+		</h:form>
+</f:view>
+
+<c:if test="${customerControllerJSF.log}">
+	<h:form>
+		<div>
+			<h:inputText value="#{orderControllerJSF.quantity}" required="true"
+				requiredMessage="quantity is mandatory"
+				converterMessage="this field must be a number" id="quantity"
+				validatorMessage="minimum=1 maximum=availability value">
+				<f:validateLongRange
+					maximum="#{productControllerJSF.product.inStock }" minimum="1" />
+			</h:inputText>
+			<h:message for="quantity" style="color:red" />
+
+
+			<h:commandLink
+				action="#{orderControllerJSF.addOrderLine(productControllerJSF.product)}"
+				value="Compra" />
+		</div>
+	</h:form>
+</c:if>
+
+</h:body>
+</html>

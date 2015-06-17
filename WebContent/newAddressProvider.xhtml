@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<div class="container-fluid">
+
+				<h1>Nuovo fornitore - 2/2</h1>
+				<h2>Tutti i campi sono obbligatori</h2>
+				<div>
+					<h:inputText value="#{providerControllerJSF.city}" required="true"
+						requiredMessage="city is mandatory" id="city"
+						p:placeholder="Città"
+						class="form-control" />
+					<h:message for="city" />
+				</div>
+				<div>
+					<h:inputText value="#{providerControllerJSF.street}" required="true"
+						requiredMessage="Street is mandatory" id="street"
+						p:placeholder="Via/Piazza"
+						class="form-control" />
+					<h:message for="street" />
+				</div>
+				<div>
+					<h:inputText value="#{providerControllerJSF.streetNumber}"
+						required="true" requiredMessage="Street number is mandatory"
+						id="streetNumber"
+						p:placeholder="Numero Civico"
+						class="form-control" />
+					<h:message for="streetNumber" />
+				</div>
+				<div>
+					<h:inputText value="#{providerControllerJSF.country}" required="true" 
+					p:placeholder="Nazione"
+					class="form-control"/>
+				</div>
+				<div>
+					<h:inputText value="#{providerControllerJSF.state}" required="true"
+						requiredMessage="State is mandatory" id="state"
+						p:placeholder="Regione"
+						class="form-control" />
+					<h:message for="state" />
+				</div>
+				<div>
+					<h:inputText value="#{providerControllerJSF.zipcode}" required="true"
+						requiredMessage="Zipcode is mandatory" id="zipcode"
+						p:placeholder="CAP"
+						class="form-control" />
+					<h:message for="zipcode" />
+				</div>
+				<div>
+					<h:commandButton value="Avanti"
+						action="#{providerControllerJSF.createAddress}"
+						class="btn btn-lg btn-primary btn-block btn-signin" />
+				</div>
+
+			</div>
+		</h:form>
+	</f:view>
+</h:body>
+</html>

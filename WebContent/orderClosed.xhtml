@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<f:view>
+	<h:body>
+		<h:form>
+
+			<h1>Ordine numero ${orderControllerJSF.order.id} evaso</h1>
+			<div>
+				<h:commandButton value="Ordini"
+					action="#{orderControllerJSF.findOpenOrders}"
+					class="btn btn-lg btn-primary btn-block btn-signin" />
+			</div>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

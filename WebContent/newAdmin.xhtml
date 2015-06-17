@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4"></div>
+
+					<div class="col-sm-4">
+						<h1>Nuovo Admin</h1>
+						<h2>Tutti i campi sono obbligatori</h2>
+						<div>
+							<h:inputText value="#{customerControllerJSF.email}"
+								required="true" requiredMessage="Email is mandatory" id="email"
+								class="form-control"
+								p:placeholder="Email" />
+							<h:message for="email" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.password}"
+								required="true" requiredMessage="Password is mandatory"
+								id="password" class="form-control"
+								p:placeholder="Password" />
+							<h:message for="password" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.firstname}"
+								required="true" requiredMessage="Firstname is mandatory"
+								id="firstname" class="form-control"
+								p:placeholder="Nome" />
+							<h:message for="firstname" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.lastname}"
+								required="true" requiredMessage="Lastname is mandatory"
+								id="lastname" class="form-control"
+								p:placeholder="Cognome" />
+							<h:message for="lastname" />
+						</div>
+						<div>
+							<h:commandButton value="Conferma"
+								action="#{adminControllerJSF.createAdmin}"
+								class="btn btn-lg btn-primary btn-block btn-signin" />
+						</div>
+						<div class="col-sm-4">
+							<div>
+								<a href="adminHome">Indietro</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+				<div class="col-sm-4"></div>
+			</div>
+			<!-- /container -->
+		</h:form>
+	</f:view>
+</h:body>
+</html>

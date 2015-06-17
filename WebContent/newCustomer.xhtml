@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4"></div>
+
+					<div class="col-sm-4">
+						<h1>Registrazione - 1/2</h1>
+						<h2>Tutti i campi sono obbligatori</h2>
+						<div>
+							<h:inputText value="#{customerControllerJSF.email}"
+								required="true" requiredMessage="Email is mandatory" id="email"
+								class="form-control"
+								p:placeholder="Email" />
+							<h:message for="email" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.password}"
+								required="true" requiredMessage="Password is mandatory"
+								id="password" class="form-control"
+								p:placeholder="Password" />
+							<h:message for="password" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.firstname}"
+								required="true" requiredMessage="Firstname is mandatory"
+								id="firstname" class="form-control"
+								p:placeholder="Nome" />
+							<h:message for="firstname" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.lastname}"
+								required="true" requiredMessage="Lastname is mandatory"
+								id="lastname" class="form-control"
+								p:placeholder="Cognome" />
+							<h:message for="lastname" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.year}"
+								required="false" requiredMessage="Year is mandatory" id="yaer"
+								class="form-control" 
+								p:placeholder="Anno"/>
+							<h:message for="year" />
+							<h:inputText value="#{customerControllerJSF.month}"
+								required="false" requiredMessage="Mounth is mandatory"
+								id="month" validatorMessage="minimum=1 maximum=12"
+								class="form-control"
+								p:placeholder="Mese">
+								<f:validateLongRange maximum="12" minimum="1" />
+							</h:inputText>
+							<h:message for="month" />
+							<h:inputText value="#{customerControllerJSF.day}"
+								required="false" requiredMessage="Day is mandatory" id="day"
+								validatorMessage="minimum=1 maximum=31" class="form-control"
+								p:placeholder="Giorno">
+								<f:validateLongRange maximum="31" minimum="1" />
+							</h:inputText>
+							<h:message for="day" />
+						</div>
+						<div>
+							<h:inputText value="#{customerControllerJSF.phoneNumber}"
+								required="true" requiredMessage="Phone number is mandatory"
+								id="phoneNumber" class="form-control" 
+								p:placeholder="Telefono"/>
+							<h:message for="phoneNumber" />
+						</div>
+						<div>
+							<h:commandButton value="Avanti"
+								action="#{customerControllerJSF.goForward}"
+								class="btn btn-lg btn-primary btn-block btn-signin" />
+						</div>
+						<div class="col-sm-4">
+							<div>
+								<a href="index">Go back</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+				<div class="col-sm-4"></div>
+			</div>
+			<!-- /container -->
+		</h:form>
+	</f:view>
+</h:body>
+</html>
