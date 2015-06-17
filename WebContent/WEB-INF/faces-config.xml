@@ -1,34 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <faces-config
-    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
-    version="2.1">
-	<managed-bean>
-		<managed-bean-name>productController</managed-bean-name>
-		<managed-bean-class>it.uniroma3.beanController.ProductController</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>customerController</managed-bean-name>
-		<managed-bean-class>it.uniroma3.beanController.CustomerController</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>addressController</managed-bean-name>
-		<managed-bean-class>it.uniroma3.beanController.AddressController</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>orderController</managed-bean-name>
-		<managed-bean-class>it.uniroma3.beanController.OrderController</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>adminController</managed-bean-name>
-		<managed-bean-class>it.uniroma3.beanController.AdminController</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+  <!--  Empty for now. There are many uses for faces-config.xml, but
+        the most common are navigation rules (instead of having
+        the return value of the "action" method be the base filename),
+        bean declarations (instead of using @ManagedBean), and
+        properties files (aka resource bundles).
+        
+        If you are not using faces-config.xml, it is perfectly legal
+        to omit the file entirely. But, most people prefer to have
+        a blank one already in their project for later use.
+        
+        From JSF 2 and PrimeFaces tutorial
+        at http://www.coreservlets.com/JSF-Tutorial/jsf2/ -->
 </faces-config>

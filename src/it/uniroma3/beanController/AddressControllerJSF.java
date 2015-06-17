@@ -7,7 +7,7 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean
 @RequestScoped
 	
-public class AddressController{
+public class AddressControllerJSF{
 		private String city;
 		private String street;
 		private String state;
