@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>MYmusic</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/form-style.css" />
+</h:head>
+<f:view>
+	<h:body>
+		<h:form>
+
+			<h1>Riepilogo utente</h1>
+			<ul>
+				<li>Nome: ${customerControllerJSF.firstname}</li>
+				<li>Cognome: ${customerControllerJSF.lastname}</li>
+				<li>Email: ${customerControllerJSF.email}</li>
+				<li>Data di nascita: ${customerControllerJSF.dateOfBirth}</li>
+				<li>Indirizzo:
+					${customerControllerJSF.street},${customerController.streetNumber}</li>
+				<li>Città: ${customerControllerJSF.city}</li>
+				<li>Nazione: ${customerControllerJSF.country}</li>
+				<li>Regione: ${customerControllerJSF.state}</li>
+				<li>CAP: ${customerControllerJSF.zipcode}</li>
+			</ul>
+			<div>
+				<h:commandButton value="Conferma"
+					action="#{customerControllerJSF.createCustomer}"
+					class="btn btn-lg btn-primary btn-block btn-signin" />
+			</div>
+
+		</h:form>
+	</h:body>
+</f:view>
+</html>
